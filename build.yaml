@@ -11,4 +11,4 @@ include:
   - board: nice_nano_v2
     shield: enki42_right
   - board: nice_nano_v2
-    shield: enki42_dongle
+    shield: enki42_dongle dongle_display
