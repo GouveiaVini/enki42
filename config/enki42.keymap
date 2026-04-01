@@ -79,16 +79,16 @@
 &kp ESCAPE  &kp EXCL   &kp AT_SIGN   &kp HASH        &kp DOLLAR  &kp PERCENT  &none   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &trans
 &trans      &kp CARET  &kp ASTERISK  &kp MINUS       &kp PLUS    &kp SQT      &none   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &trans
 &trans      &kp N0     &kp N1        &kp UNDERSCORE  &kp EQUAL   &none        &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &trans
-                                     &trans          &trans      &trans       &trans  &kp NUMBER_0  &trans
+                                     &bootloader     &trans      &trans       &trans  &kp NUMBER_0  &trans
             >;
         };
 
         arrow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &kp UP_ARROW    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans          &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans          &kp UP_ARROW    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                        &trans  &trans  &trans  &trans  &bootloader  &trans
             >;
         };
 
