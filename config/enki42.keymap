@@ -55,6 +55,60 @@
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
         };
+
+        abreFechaP: abreFechaP {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ABREFECHAP";
+            #binding-cells = <0>;
+            tapping-term-ms = <160>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        abreFechaCh: abreFechaCh {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ABREFECHACH";
+            #binding-cells = <0>;
+            tapping-term-ms = <160>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+
+        abreFechaCo: abreFechaCo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ABREFECHACO";
+            #binding-cells = <0>;
+            tapping-term-ms = <160>;
+            bindings = <&kp LS(LEFT_BRACKET)>, <&kp LS(RIGHT_BRACKET)>;
+        };
+
+        paren: paren {
+            compatible = "zmk,behavior-hold-tap";
+            label = "PAREN";
+            bindings = <&parens>, <&abreFechaP>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
+
+        colches: colches {
+            compatible = "zmk,behavior-hold-tap";
+            label = "COLCHES";
+            bindings = <&colche>, <&abreFechaCo>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
+
+        chave: chave {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CHAVE";
+            bindings = <&chaves>, <&abreFechaCh>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -128,31 +182,37 @@
 
         ch {
             bindings = <&ch>;
-            key-positions = <40 31 27>;
-            require-prior-idle-ms = <100>;
-        };
-
-        ca {
-            bindings = <&ca>;
-            key-positions = <40 27 20>;
-            require-prior-idle-ms = <100>;
-        };
-
-        co {
-            bindings = <&co>;
-            key-positions = <40 27 8>;
-            require-prior-idle-ms = <100>;
-        };
-
-        chao {
-            bindings = <&chao>;
-            key-positions = <27 40 20 19>;
+            key-positions = <27 38>;
             require-prior-idle-ms = <100>;
         };
 
         ao {
             bindings = <&ao>;
-            key-positions = <19 40 20>;
+            key-positions = <20 8>;
+            require-prior-idle-ms = <100>;
+        };
+
+        an {
+            bindings = <&an>;
+            key-positions = <20 19>;
+            require-prior-idle-ms = <100>;
+        };
+
+        c_paren {
+            bindings = <&paren 0 0>;
+            key-positions = <8 9>;
+            require-prior-idle-ms = <100>;
+        };
+
+        c_chaves {
+            bindings = <&chave 0 0>;
+            key-positions = <20 21>;
+            require-prior-idle-ms = <100>;
+        };
+
+        c_colche {
+            bindings = <&colches 0 0>;
+            key-positions = <33 32>;
             require-prior-idle-ms = <100>;
         };
     };
@@ -193,20 +253,6 @@
             label = "CH";
         };
 
-        ca: cha {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp C &kp A>;
-            label = "CHA";
-        };
-
-        chao: chao {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SQT &kp C &kp TILDE &kp A &kp O>;
-            label = "CHAO";
-        };
-
         ao: ao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -214,11 +260,32 @@
             label = "AO";
         };
 
-        co: cho {
+        an: an {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SQT &kp C &kp O>;
-            label = "CHO";
+            bindings = <&kp TILDE &kp A>;
+            label = "AN";
+        };
+
+        parens: parens {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+            label = "PARENS";
+        };
+
+        chaves: chaves {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>;
+            label = "CHAVES";
+        };
+
+        colche: colche {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
+            label = "COLCHE";
         };
     };
 
