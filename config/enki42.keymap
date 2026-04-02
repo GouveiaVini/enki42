@@ -125,27 +125,27 @@
             require-prior-idle-ms = <100>;
         };
 
-        cha {
-            bindings = <&cha>;
-            key-positions = <40 27 19>;
+        ca {
+            bindings = <&ca>;
+            key-positions = <40 27 20>;
             require-prior-idle-ms = <100>;
         };
 
-        cho {
-            bindings = <&cho>;
-            key-positions = <40 27 7>;
+        co {
+            bindings = <&co>;
+            key-positions = <40 27 8>;
             require-prior-idle-ms = <100>;
         };
 
         chao {
             bindings = <&chao>;
-            key-positions = <27 19 18 40>;
+            key-positions = <27 40 20 19>;
             require-prior-idle-ms = <100>;
         };
 
         ao {
             bindings = <&ao>;
-            key-positions = <19 18 40>;
+            key-positions = <19 40 20>;
             require-prior-idle-ms = <100>;
         };
     };
@@ -186,10 +186,10 @@
             label = "CH";
         };
 
-        cha: cha {
+        ca: cha {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SQT &kp C &kp TILDE &kp A>;
+            bindings = <&kp SQT &kp C &kp A>;
             label = "CHA";
         };
 
@@ -207,10 +207,10 @@
             label = "AO";
         };
 
-        cho: cho {
+        co: cho {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SQT &kp C &kp TILDE &kp O>;
+            bindings = <&kp SQT &kp C &kp O>;
             label = "CHO";
         };
     };
