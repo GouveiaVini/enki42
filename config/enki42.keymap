@@ -50,6 +50,40 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <37 3 14>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <3 16 37>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <37 14 15>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <37 15 16>;
+        };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <26 27 37>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <37 2 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -64,7 +98,7 @@
 &kp TAB          &kp Q                 &kp B                 &kp M                     &kp G                   &kp K          &kp X      &kp L                    &kp O                      &kp U                  &kp Y                  &kp DELETE
 &mt LCTRL GRAVE  &homerowL LEFT_GUI D  &homerowL LEFT_ALT N  &homerowL LEFT_CONTROL S  &homerowL LEFT_SHIFT T  &kp W          &kp Z      &homerowR RIGHT_SHIFT R  &homerowR RIGHT_CONTROL A  &homerowR RIGHT_ALT E  &homerowR RIGHT_GUI I  &mt RIGHT_ALT SQT
 &kp LEFT_SHIFT   &kp SLASH             &kp F                 &kp C                     &kp P                   &kp V          &kp J      &kp H                    &kp COMMA                  &kp DOT                &kp SEMICOLON          &kp ENTER
-                                                             &none                     &mo 1                   &kp BACKSPACE  &kp SPACE  &mo 3                    &mo 2
+                                                             &mo 4                     &mo 1                   &kp BACKSPACE  &kp SPACE  &mo 3                    &mo 2
             >;
         };
 
@@ -98,6 +132,15 @@
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                               &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans              &trans              &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&sk LEFT_ALT        &kp LG(UP_ARROW)    &kp TAB              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                                             &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
