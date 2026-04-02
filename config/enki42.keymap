@@ -276,7 +276,7 @@
         nav {
             bindings = <
 &trans              &trans              &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&sk LEFT_ALT        &kp LG(UP_ARROW)    &kp TAB              &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&sk LEFT_ALT        &kp LG(UP_ARROW)    &swapper             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                                              &trans  &trans  &trans  &trans  &trans  &trans
             >;
