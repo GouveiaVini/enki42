@@ -48,6 +48,13 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <39 40 41 22 21 20 19>;
         };
+
+        swapper: swapper {
+            compatible = "zmk,behavior-tri-state";
+            label = "SWAPPER";
+            #binding-cells = <0>;
+            bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
+        };
     };
 
     combos {
