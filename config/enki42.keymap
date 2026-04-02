@@ -55,32 +55,163 @@
 
         copy {
             bindings = <&kp LC(C)>;
-            key-positions = <37 3 14>;
+            key-positions = <3 14>;
+            require-prior-idle-ms = <100>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
-            key-positions = <3 16 37>;
+            key-positions = <3 16>;
+            require-prior-idle-ms = <100>;
         };
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <37 14 15>;
+            key-positions = <14 15>;
+            require-prior-idle-ms = <100>;
         };
 
         enter {
             bindings = <&kp ENTER>;
-            key-positions = <37 15 16>;
+            key-positions = <15 16>;
+            require-prior-idle-ms = <100>;
         };
 
         undo {
             bindings = <&kp LC(Z)>;
-            key-positions = <26 27 37>;
+            key-positions = <26 27>;
+            require-prior-idle-ms = <100>;
         };
 
         cut {
             bindings = <&kp LC(X)>;
-            key-positions = <37 2 3>;
+            key-positions = <2 3>;
+            require-prior-idle-ms = <100>;
+        };
+
+        all {
+            bindings = <&kp LC(A)>;
+            key-positions = <2 1>;
+            require-prior-idle-ms = <100>;
+        };
+
+        eh {
+            bindings = <&eh>;
+            key-positions = <21 31>;
+            require-prior-idle-ms = <100>;
+        };
+
+        ah {
+            bindings = <&ah>;
+            key-positions = <31 20>;
+            require-prior-idle-ms = <100>;
+        };
+
+        ih {
+            bindings = <&ih>;
+            key-positions = <31 22>;
+            require-prior-idle-ms = <100>;
+        };
+
+        oh {
+            bindings = <&oh>;
+            key-positions = <31 8>;
+            require-prior-idle-ms = <100>;
+        };
+
+        ch {
+            bindings = <&ch>;
+            key-positions = <40 31 27>;
+            require-prior-idle-ms = <100>;
+        };
+
+        cha {
+            bindings = <&cha>;
+            key-positions = <40 27 19>;
+            require-prior-idle-ms = <100>;
+        };
+
+        cho {
+            bindings = <&cho>;
+            key-positions = <40 27 7>;
+            require-prior-idle-ms = <100>;
+        };
+
+        chao {
+            bindings = <&chao>;
+            key-positions = <27 19 18 40>;
+            require-prior-idle-ms = <100>;
+        };
+
+        ao {
+            bindings = <&ao>;
+            key-positions = <19 18 40>;
+            require-prior-idle-ms = <100>;
+        };
+    };
+
+    macros {
+        eh: eh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp E>;
+            label = "EH";
+        };
+
+        ah: ah {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp A>;
+            label = "AH";
+        };
+
+        oh: oh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp O>;
+            label = "OH";
+        };
+
+        ih: ih {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp I>;
+            label = "IH";
+        };
+
+        ch: ch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp C>;
+            label = "CH";
+        };
+
+        cha: cha {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp C &kp TILDE &kp A>;
+            label = "CHA";
+        };
+
+        chao: chao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp C &kp TILDE &kp A &kp O>;
+            label = "CHAO";
+        };
+
+        ao: ao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp A &kp O>;
+            label = "AO";
+        };
+
+        cho: cho {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp C &kp TILDE &kp O>;
+            label = "CHO";
         };
     };
 
