@@ -109,6 +109,26 @@
             flavor = "tap-preferred";
             tapping-term-ms = <180>;
         };
+
+        aspasSimples: aspasSimples {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ASPASSIMPLES";
+            bindings = <&aspas>, <&aspS>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
+
+        aspasDuplas: aspasDuplas {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ASPASDUPLAS";
+            bindings = <&aspasD>, <&aspD>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+        };
     };
 
     combos {
@@ -200,19 +220,43 @@
 
         c_paren {
             bindings = <&paren 0 0>;
-            key-positions = <8 9>;
+            key-positions = <21 20 39>;
             require-prior-idle-ms = <100>;
         };
 
         c_chaves {
             bindings = <&chave 0 0>;
-            key-positions = <20 21>;
+            key-positions = <8 9 39>;
             require-prior-idle-ms = <100>;
         };
 
         c_colche {
             bindings = <&colches 0 0>;
-            key-positions = <33 32>;
+            key-positions = <32 33 39>;
+            require-prior-idle-ms = <100>;
+        };
+
+        aspas_C {
+            bindings = <&aspasSimples 0 0>;
+            key-positions = <3 2 38>;
+            require-prior-idle-ms = <100>;
+        };
+
+        aspasD_C {
+            bindings = <&aspasDuplas 0 0>;
+            key-positions = <38 14 15>;
+            require-prior-idle-ms = <100>;
+        };
+
+        int {
+            bindings = <&kp LS(SLASH)>;
+            key-positions = <13 14>;
+            require-prior-idle-ms = <100>;
+        };
+
+        PontVirg {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <22 21>;
             require-prior-idle-ms = <100>;
         };
     };
@@ -286,6 +330,34 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LEFT_BRACKET) &kp LS(RIGHT_BRACKET) &kp LEFT>;
             label = "COLCHE";
+        };
+
+        aspas: aspas {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE &kp SPACE &kp SINGLE_QUOTE &kp SPACE &kp LEFT>;
+            label = "ASPAS";
+        };
+
+        aspasD: aspasD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SINGLE_QUOTE) &kp SPACE &kp LS(SINGLE_QUOTE) &kp SPACE &kp LEFT>;
+            label = "ASPASD";
+        };
+
+        aspS: aspS {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE &kp SPACE>;
+            label = "ASPS";
+        };
+
+        aspD: aspD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SINGLE_QUOTE) &kp SPACE>;
+            label = "ASPD";
         };
     };
 
