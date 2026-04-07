@@ -274,6 +274,12 @@
             key-positions = <8 21>;
             require-prior-idle-ms = <100>;
         };
+
+        ea {
+            bindings = <&ea>;
+            key-positions = <21 20>;
+            require-prior-idle-ms = <100>;
+        };
     };
 
     macros {
@@ -401,6 +407,13 @@
             #binding-cells = <0>;
             bindings = <&kp TILDE &kp O &kp E &kp S>;
             label = "OES";
+        };
+
+        ea: ea {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CARET &kp E>;
+            label = "EA";
         };
     };
 
