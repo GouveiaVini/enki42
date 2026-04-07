@@ -268,6 +268,12 @@
             key-positions = <35 23>;
             require-prior-idle-ms = <100>;
         };
+
+        oes {
+            bindings = <&oes>;
+            key-positions = <8 21>;
+            require-prior-idle-ms = <100>;
+        };
     };
 
     macros {
@@ -388,6 +394,13 @@
             #binding-cells = <0>;
             bindings = <&kp C &kp O &kp N &kp S &kp I &kp N &kp C &kp O &kp TAB &kp C &kp O &kp N &kp S &kp I &kp N &kp C &kp O>;
             label = "CONSINCO";
+        };
+
+        oes: oes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE &kp O &kp E &kp S>;
+            label = "OES";
         };
     };
 
