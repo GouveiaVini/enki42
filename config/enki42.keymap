@@ -256,6 +256,18 @@
             key-positions = <22 21>;
             require-prior-idle-ms = <100>;
         };
+
+        resetL {
+            bindings = <&sys_reset>;
+            key-positions = <24 12>;
+            require-prior-idle-ms = <100>;
+        };
+
+        resetR {
+            bindings = <&sys_reset>;
+            key-positions = <35 23>;
+            require-prior-idle-ms = <100>;
+        };
     };
 
     macros {
@@ -370,6 +382,13 @@
             bindings = <&kp G &kp O &kp U &kp V &kp E &kp I &kp A &kp V &kp I &kp N &kp I &kp C &kp I &kp U &kp S &kp N9 &kp N6 &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "EMAIL";
         };
+
+        consinco: consinco {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp O &kp N &kp S &kp I &kp N &kp C &kp O &kp TAB &kp C &kp O &kp N &kp S &kp I &kp N &kp C &kp O>;
+            label = "CONSINCO";
+        };
     };
 
     keymap {
@@ -398,10 +417,10 @@
             //                      | ADJ | ___ | ___ |    | ___ | ___ | ADJ |
 
             bindings = <
-&kp ESCAPE  &kp EXCL   &kp AT_SIGN   &kp HASH        &kp DOLLAR  &kp PERCENT  &select  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none  &trans
-&trans      &kp CARET  &kp ASTERISK  &kp MINUS       &kp PLUS    &kp SQT      &email   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none  &trans
-&trans      &kp N0     &kp N1        &kp UNDERSCORE  &kp EQUAL   &none        &none    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &trans
-                                     &bootloader     &trans      &trans       &trans   &kp NUMBER_0  &trans
+&kp ESCAPE  &kp EXCL   &kp AT_SIGN   &kp HASH        &kp DOLLAR  &kp PERCENT  &select    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
+&trans      &kp CARET  &kp ASTERISK  &kp MINUS       &kp PLUS    &kp SQT      &email     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
+&trans      &kp N0     &kp N1        &kp UNDERSCORE  &kp EQUAL   &none        &consinco  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA     &kp PERIOD
+                                     &bootloader     &trans      &trans       &trans     &kp NUMBER_0  &trans
             >;
         };
 
@@ -416,9 +435,9 @@
 
         layer_5 {
             bindings = <
-&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp F13
+&trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F14  &kp F15
                               &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
