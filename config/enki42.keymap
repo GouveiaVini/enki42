@@ -84,7 +84,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <280>;
         };
 
         colches: colches {
@@ -94,7 +94,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <280>;
         };
 
         chave: chave {
@@ -104,7 +104,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <280>;
         };
 
         aspasSimples: aspasSimples {
@@ -254,18 +254,6 @@
         PontVirg {
             bindings = <&kp SEMICOLON>;
             key-positions = <22 21>;
-            require-prior-idle-ms = <100>;
-        };
-
-        resetL {
-            bindings = <&sys_reset>;
-            key-positions = <24 12>;
-            require-prior-idle-ms = <100>;
-        };
-
-        resetR {
-            bindings = <&sys_reset>;
-            key-positions = <35 23>;
             require-prior-idle-ms = <100>;
         };
 
@@ -431,11 +419,11 @@
 &kp TAB          &kp Q                 &kp B                 &kp M                     &kp G                   &kp K          &kp X      &kp L                    &kp O                      &kp U                  &kp Y                  &kp DELETE
 &mt LCTRL GRAVE  &homerowL LEFT_GUI D  &homerowL LEFT_ALT N  &homerowL LEFT_CONTROL S  &homerowL LEFT_SHIFT T  &kp W          &kp Z      &homerowR RIGHT_SHIFT R  &homerowR RIGHT_CONTROL A  &homerowR RIGHT_ALT E  &homerowR RIGHT_GUI I  &mt RIGHT_ALT SQT
 &kp LEFT_SHIFT   &kp SLASH             &kp F                 &kp C                     &kp P                   &kp V          &kp J      &kp H                    &kp COMMA                  &kp DOT                &kp SEMICOLON          &kp ENTER
-                                                             &mo 4                     &mo 1                   &kp BACKSPACE  &kp SPACE  &mo 3                    &mo 2
+                                                             &mo 3                     &mo 1                   &kp BACKSPACE  &kp SPACE  &kp LEFT_SHIFT           &mo 2
             >;
         };
 
-        ESP {
+        esp {
             // -----------------------------------------------------------------------------------------
             //|LGUI/CAPS |  *  |  7 |  8  |  9  |  +  |    |  !  |  @  |  #  |  $  |  %  | RGUI/F1 |
             //|CTRL/MENU |  /  |  4 |  5  |  6  |  -  |    |  ^  |  &  |  *  |  (  |  )  | CTRL/F2 |
@@ -445,7 +433,7 @@
             bindings = <
 &kp ESCAPE  &kp EXCL   &kp AT_SIGN   &kp HASH        &kp DOLLAR  &kp PERCENT  &select    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS      &kp MINUS
 &trans      &kp CARET  &kp ASTERISK  &kp MINUS       &kp PLUS    &kp SQT      &email     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp ASTERISK  &kp SLASH
-&trans      &kp N0     &kp N1        &kp UNDERSCORE  &kp EQUAL   &none        &consinco  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA     &kp PERIOD
+&trans      &kp N0     &kp N1        &kp UNDERSCORE  &kp EQUAL   &kp GRAVE    &consinco  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp COMMA     &kp PERIOD
                                      &bootloader     &trans      &trans       &trans     &kp NUMBER_0  &trans
             >;
         };
@@ -459,21 +447,12 @@
             >;
         };
 
-        layer_5 {
+        func {
             bindings = <
 &kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp F13
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F14  &kp F15
                               &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        nav {
-            bindings = <
-&trans              &trans              &trans               &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&sk LEFT_ALT        &kp LG(UP_ARROW)    &swapper             &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                                             &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
