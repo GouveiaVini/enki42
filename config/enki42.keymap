@@ -61,6 +61,8 @@
             label = "ABREFECHAP";
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+
+            tapping-term-ms = <285>;
         };
 
         abreFechaCh: abreFechaCh {
@@ -125,6 +127,15 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <180>;
+        };
+
+        abreFechaAba: abreFechaAba {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ABREFECHAABA";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T)>, <&kp LC(W)>;
+
+            tapping-term-ms = <300>;
         };
     };
 
@@ -268,6 +279,18 @@
             key-positions = <21 20>;
             require-prior-idle-ms = <100>;
         };
+
+        s_enter {
+            bindings = <&kp LS(ENTER)>;
+            key-positions = <15 16 14>;
+            require-prior-idle-ms = <100>;
+        };
+
+        uh {
+            bindings = <&oh>;
+            key-positions = <31 9>;
+            require-prior-idle-ms = <100>;
+        };
     };
 
     macros {
@@ -403,6 +426,13 @@
             bindings = <&kp CARET &kp E>;
             label = "EA";
         };
+
+        uh: uh {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp U>;
+            label = "UH";
+        };
     };
 
     keymap {
@@ -416,10 +446,10 @@
             //                             | RSE | SPC | LWR |   | LWR | BKSP | RSE |
 
             bindings = <
-&kp TAB          &kp Q                 &kp B                 &kp M                     &kp G                   &kp K          &kp X      &kp L                    &kp O                      &kp U                  &kp Y                  &kp DELETE
-&mt LCTRL GRAVE  &homerowL LEFT_GUI D  &homerowL LEFT_ALT N  &homerowL LEFT_CONTROL S  &homerowL LEFT_SHIFT T  &kp W          &kp Z      &homerowR RIGHT_SHIFT R  &homerowR RIGHT_CONTROL A  &homerowR RIGHT_ALT E  &homerowR RIGHT_GUI I  &mt RIGHT_ALT SQT
-&kp LEFT_SHIFT   &kp SLASH             &kp F                 &kp C                     &kp P                   &kp V          &kp J      &kp H                    &kp COMMA                  &kp DOT                &kp SEMICOLON          &kp ENTER
-                                                             &mo 3                     &mo 1                   &kp BACKSPACE  &kp SPACE  &kp LEFT_SHIFT           &mo 2
+&kp ESCAPE    &kp Q                 &kp B                 &kp M                     &kp G                   &kp K          &kp X      &kp L                    &kp O                      &kp U                  &kp Y                  &kp DELETE
+&kp TAB       &homerowL LEFT_GUI D  &homerowL LEFT_ALT N  &homerowL LEFT_CONTROL S  &homerowL LEFT_SHIFT T  &kp W          &kp Z      &homerowR RIGHT_SHIFT R  &homerowR RIGHT_CONTROL A  &homerowR RIGHT_ALT E  &homerowR RIGHT_GUI I  &mt RIGHT_ALT SQT
+&kp CAPSLOCK  &kp SLASH             &kp F                 &kp C                     &kp P                   &kp V          &kp J      &kp H                    &kp COMMA                  &kp DOT                &kp SEMICOLON          &kp ENTER
+                                                          &mo 3                     &mo 1                   &kp BACKSPACE  &kp SPACE  &kp LEFT_SHIFT           &mo 2
             >;
         };
 
@@ -440,10 +470,10 @@
 
         arrow {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans          &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans          &kp UP_ARROW    &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                        &trans  &trans  &trans  &trans  &bootloader  &trans
+&trans  &trans  &trans  &kp LA(F4)        &kp LA(F10)     &trans        &trans  &trans       &trans  &kp LC(LS(TAB))  &abreFechaAba   &kp LC(TAB)
+&trans  &trans  &trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans        &trans  &trans       &trans  &kp HOME         &kp UP_ARROW    &kp END
+&trans  &trans  &trans  &trans            &trans          &trans        &trans  &trans       &trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
+                        &trans            &kp CAPSLOCK    &kp LEFT_GUI  &trans  &bootloader  &trans
             >;
         };
 
