@@ -491,7 +491,7 @@
         };
 
         esp {
-            display-name = "SIMBOLOS";
+            display-name = "SYM";
             // -----------------------------------------------------------------------------------------
             //|LGUI/CAPS |  *  |  7 |  8  |  9  |  +  |    |  !  |  @  |  #  |  $  |  %  | RGUI/F1 |
             //|CTRL/MENU |  /  |  4 |  5  |  6  |  -  |    |  ^  |  &  |  *  |  (  |  )  | CTRL/F2 |
@@ -507,7 +507,7 @@
         };
 
         arrow {
-            display-name = "NAVEGACAO";
+            display-name = "NAV";
             bindings = <
 &trans  &trans  &trans  &kp LA(F4)        &kp LA(F10)     &trans        &trans  &trans       &trans  &kp LC(LS(TAB))  &abreFechaAba   &kp LC(TAB)
 &trans  &trans  &trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans        &trans  &trans       &trans  &kp HOME         &kp UP_ARROW    &kp END
@@ -517,7 +517,7 @@
         };
 
         func {
-            display-name = "FUNCOES";
+            display-name = "FUNC";
             bindings = <
 &kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &kp KP_NUMLOCK  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp F13
