@@ -160,6 +160,13 @@
             require-prior-idle-ms = <100>;
         };
 
+        find {
+            bindings = <&kp LC(F)>;
+            layers = <ROMAK>;
+            key-positions = <26 3 16>;
+            require-prior-idle-ms = <100>;
+        };
+
         tab {
             bindings = <&kp TAB>;
             layers = <ROMAK>;
