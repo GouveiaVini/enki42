@@ -36,10 +36,10 @@ lv_obj_t *zmk_display_status_screen() {
     zmk_widget_layer_status_init(&layer_status_widget, screen);
     lv_obj_t *layer = zmk_widget_layer_status_obj(&layer_status_widget);
     lv_style_init(&layer_style);
-    lv_style_set_text_font(&layer_style, &lv_font_unscii_8);
+    lv_style_set_text_font(&layer_style, &lv_font_unscii_16);
     lv_obj_add_style(layer, &layer_style, LV_PART_MAIN);
     lv_obj_set_width(layer, 128);
-    lv_obj_align(layer, LV_ALIGN_TOP_MID, 0, -2);
+    lv_obj_align(layer, LV_ALIGN_TOP_MID, 0, 2);
 
     zmk_widget_modifiers_init(&modifiers_widget, screen);
     lv_obj_t *modifiers = zmk_widget_modifiers_obj(&modifiers_widget);
