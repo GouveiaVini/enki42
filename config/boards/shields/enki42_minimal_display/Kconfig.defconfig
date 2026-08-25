@@ -1,0 +1,74 @@
+if SHIELD_ENKI42_MINIMAL_DISPLAY
+
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
+
+config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    select LV_USE_LABEL
+    select LV_USE_IMG
+    select LV_USE_CANVAS
+    select LV_USE_ANIMATION
+    select LV_USE_LINE
+    select LV_FONT_UNSCII_8
+    select LV_FONT_MONTSERRAT_14
+    select ZMK_WPM
+    imply ZMK_HID_INDICATORS
+
+config ZMK_DONGLE_DISPLAY_DONGLE_BATTERY
+    bool "Show the dongle battery level"
+    default n
+
+config ZMK_DONGLE_DISPLAY_MAC_MODIFIERS
+    bool "Use macOS modifier symbols"
+    default n
+
+config ZMK_DONGLE_DISPLAY_BONGO_CAT
+    bool "Display the Bongo Cat widget"
+    default n
+
+config ZMK_DONGLE_DISPLAY_MODIFIERS
+    bool "Display the modifiers widget"
+    default y
+
+config ZMK_DONGLE_DISPLAY_LAYER
+    bool "Display the highest active layer"
+    default y
+
+config ZMK_DONGLE_DISPLAY_LAYER_NAME_SCROLL_WIDTH
+    int "Layer label width"
+    default 128
+
+config ZMK_DONGLE_DISPLAY_LAYER_TEXT_ALIGN
+    string "Layer label alignment"
+    default "center"
+
+config ZMK_DONGLE_DISPLAY_WPM
+    bool "Display typing speed"
+    default y
+
+config ZMK_DONGLE_DISPLAY_WPM_DISABLED_LAYERS
+    string "Layers excluded from WPM measurement"
+    default ""
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+config LV_Z_MEM_POOL_SIZE
+    default 8192
+
+config LV_Z_VDB_SIZE
+    default 64
+
+config LV_DPI_DEF
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+endif

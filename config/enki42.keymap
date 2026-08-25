@@ -475,6 +475,7 @@
         compatible = "zmk,keymap";
 
         romak {
+            display-name = "ROMAK";
             // ------------------------------------------------------------------------------------------------
             //| LGUI/] |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | RGUI/[ | 
             //| CTRL/` |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | CTRL/' |
@@ -490,6 +491,7 @@
         };
 
         esp {
+            display-name = "SIMBOLOS";
             // -----------------------------------------------------------------------------------------
             //|LGUI/CAPS |  *  |  7 |  8  |  9  |  +  |    |  !  |  @  |  #  |  $  |  %  | RGUI/F1 |
             //|CTRL/MENU |  /  |  4 |  5  |  6  |  -  |    |  ^  |  &  |  *  |  (  |  )  | CTRL/F2 |
@@ -505,6 +507,7 @@
         };
 
         arrow {
+            display-name = "NAVEGACAO";
             bindings = <
 &trans  &trans  &trans  &kp LA(F4)        &kp LA(F10)     &trans        &trans  &trans       &trans  &kp LC(LS(TAB))  &abreFechaAba   &kp LC(TAB)
 &trans  &trans  &trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans        &trans  &trans       &trans  &kp HOME         &kp UP_ARROW    &kp END
@@ -514,6 +517,7 @@
         };
 
         func {
+            display-name = "FUNCOES";
             bindings = <
 &kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp F13
