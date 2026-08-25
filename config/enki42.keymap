@@ -160,13 +160,6 @@
             require-prior-idle-ms = <100>;
         };
 
-        find {
-            bindings = <&kp LC(F)>;
-            layers = <ROMAK>;
-            key-positions = <14 26>;
-            require-prior-idle-ms = <100>;
-        };
-
         tab {
             bindings = <&kp TAB>;
             layers = <ROMAK>;
@@ -519,7 +512,7 @@
         func {
             display-name = "FUNCOES";
             bindings = <
-&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&kp CAPSLOCK  &trans  &trans  &trans  &trans  &trans  &kp NUM_LOCK  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F12  &kp F13
 &trans        &trans  &trans  &trans  &trans  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F14  &kp F15
                               &trans  &trans  &trans  &trans  &trans  &trans
