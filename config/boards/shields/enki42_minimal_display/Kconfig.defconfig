@@ -11,8 +11,7 @@ config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
     select LV_USE_ANIMATION
     select LV_USE_LINE
     select LV_FONT_UNSCII_8
-    select LV_FONT_MONTSERRAT_14
-    select ZMK_WPM
+    select LV_FONT_UNSCII_16
     imply ZMK_HID_INDICATORS
 
 config ZMK_DONGLE_DISPLAY_DONGLE_BATTERY
@@ -45,7 +44,7 @@ config ZMK_DONGLE_DISPLAY_LAYER_TEXT_ALIGN
 
 config ZMK_DONGLE_DISPLAY_WPM
     bool "Display typing speed"
-    default y
+    default n
 
 config ZMK_DONGLE_DISPLAY_WPM_DISABLED_LAYERS
     string "Layers excluded from WPM measurement"

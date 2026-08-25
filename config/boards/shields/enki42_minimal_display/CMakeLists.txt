@@ -19,6 +19,4 @@ if(CONFIG_ZMK_DISPLAY AND CONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM AND ((NOT CONF
     if(CONFIG_ZMK_BATTERY)
         zephyr_library_sources(${DONGLE_DISPLAY_DIR}/widgets/battery_status.c)
     endif()
-    zephyr_library_sources(${DONGLE_DISPLAY_DIR}/widgets/wpm_status.c)
-    zephyr_library_sources(${DONGLE_DISPLAY_DIR}/widgets/wpm_status_sym.c)
 endif()
