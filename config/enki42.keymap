@@ -170,7 +170,7 @@
         tab {
             bindings = <&kp TAB>;
             layers = <ROMAK>;
-            key-positions = <14 15 16>;
+            key-positions = <3 4 38>;
             require-prior-idle-ms = <100>;
         };
 
