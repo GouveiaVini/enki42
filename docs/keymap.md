@@ -26,7 +26,8 @@ Configuração: ZMK, Windows e layout Romak. As imagens abaixo são geradas a pa
 - Segure `Space/NAV`: ativa `NAV`.
 - A antiga tecla dedicada a `NAV` continua funcionando.
 - Em `NAV`, `N` avança pelas janelas com `Alt+Tab` e `D` volta com `Alt+Shift+Tab`.
-- As setas formam um T invertido central: `A` para cima e `H , .` para esquerda, baixo e direita.
+- O bloco NAV foi centralizado inteiro: `R`, `A`, `E` são `Home`, cima e `End`; abaixo, `H`, `,`, `.` são esquerda, baixo e direita.
+- Acima dele, `L`, `O`, `U` são aba anterior, nova/fecha aba e próxima aba.
 
 ## Combos
 
@@ -71,6 +72,7 @@ Todos os combos abaixo funcionam somente na layer `ROMAK`. `Bksp` é a tecla do 
 | Aspas simples | `M` + `B` + `Bksp` |
 | Aspas duplas | `Bksp` + `N` + `S` |
 | Interrogação `?` | `D` + `N` + `Bksp` |
-| Ponto e vírgula `;` | `I` + `E` |
+| Ponto e vírgula `;` | `I` + `E` + `Space` |
+| Page Up | `.` + `;` + `Space` |
 
 Nos combos de pares e aspas, toque e hold podem executar variantes diferentes definidas pelos comportamentos ZMK.

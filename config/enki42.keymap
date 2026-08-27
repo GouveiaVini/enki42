@@ -306,7 +306,14 @@
         PontVirg {
             bindings = <&kp SEMICOLON>;
             layers = <ROMAK>;
-            key-positions = <22 21>;
+            key-positions = <22 21 39>;
+            require-prior-idle-ms = <100>;
+        };
+
+        page_up {
+            bindings = <&kp PAGE_UP>;
+            layers = <ROMAK>;
+            key-positions = <33 34 39>;
             require-prior-idle-ms = <100>;
         };
 
@@ -519,8 +526,8 @@
         arrow {
             display-name = "NAV";
             bindings = <
-&trans  &trans            &trans      &kp LA(F4)        &kp LA(F10)     &trans        &trans  &trans       &trans          &kp LC(LS(TAB))  &abreFechaAba  &kp LC(TAB)
-&trans  &kp LA(LS(TAB))   &swapper    &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans        &trans  &trans       &kp UP_ARROW    &kp HOME         &trans         &kp END
+&trans  &trans            &trans      &kp LA(F4)        &kp LA(F10)     &trans        &trans  &kp LC(LS(TAB))  &abreFechaAba  &kp LC(TAB)     &trans  &trans
+&trans  &kp LA(LS(TAB))   &swapper    &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans        &trans  &kp HOME         &kp UP_ARROW   &kp END         &trans  &trans
 &trans  &trans            &trans      &trans            &trans          &trans        &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans         &trans
                         &trans            &kp CAPSLOCK    &kp LEFT_GUI  &trans  &bootloader  &trans
             >;

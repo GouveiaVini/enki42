@@ -49,11 +49,11 @@ layers:
     - Alt+F10
     - {type: trans}
   - - {type: trans}
-    - {type: trans}
-    - {type: trans}
     - Ctrl+Shift+Tab
     - 'Aba: nova / fecha'
     - Ctrl+Tab
+    - {type: trans}
+    - {type: trans}
   - - {type: trans}
     - Alt+Shift+Tab
     - Alt+Tab
@@ -61,11 +61,11 @@ layers:
     - Shift
     - {type: trans}
   - - {type: trans}
-    - {type: trans}
-    - ↑
     - HOME
-    - {type: trans}
+    - ↑
     - END
+    - {type: trans}
+    - {type: trans}
   - - {type: trans}
     - {type: trans}
     - {type: trans}
@@ -186,8 +186,11 @@ combos:
 - p: [13, 14, 38]
   k: Shift+/
   l: [ROMAK]
-- p: [22, 21]
+- p: [22, 21, 39]
   k: ;
+  l: [ROMAK]
+- p: [33, 34, 39]
+  k: PAGE UP
   l: [ROMAK]
 - p: [8, 21]
   k: ões
