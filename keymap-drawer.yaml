@@ -1,0 +1,203 @@
+layout: {zmk_keyboard: enki42}
+layers:
+  ROMAK:
+  - [Esc, Q, B, M, G, K]
+  - [X, L, O, U, Y, Del]
+  - - Tab
+    - {t: D, h: Win}
+    - {t: N, h: LEFT ALT}
+    - {t: S, h: Ctrl}
+    - {t: T, h: Shift}
+    - W
+  - - Z
+    - {t: R, h: RIGHT SHIFT}
+    - {t: A, h: RIGHT CONTROL}
+    - {t: E, h: RIGHT ALT}
+    - {t: I, h: RIGHT GUI}
+    - {t: '''', h: RIGHT ALT}
+  - [Caps, /, F, C, P, V]
+  - [J, H, ',', ., ;, Enter]
+  - - FUNC
+    - SYM
+    - Bksp
+    - {t: Space, h: NAV}
+    - Shift
+    - NAV
+  SYM:
+  - [Esc, '!', '@', '#', $, '%']
+  - [SELECT * FROM, '7', '8', '9', +, '-']
+  - [Ctrl+F12, ^, '*', '-', +, '''']
+  - [E-mail, '4', '5', '6', '*', /]
+  - - {type: trans}
+    - '0'
+    - '1'
+    - _
+    - '='
+    - '`'
+  - [Consinco, '1', '2', '3', ',', .]
+  - - Boot
+    - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - '0'
+    - {type: trans}
+  NAV:
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Alt+F4
+    - Alt+F10
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - Ctrl+Shift+Tab
+    - 'Aba: nova / fecha'
+    - Ctrl+Tab
+  - - {type: trans}
+    - Alt+Shift+Tab
+    - Alt+Tab
+    - Ctrl
+    - Shift
+    - {type: trans}
+  - - {type: trans}
+    - {type: trans}
+    - ↑
+    - HOME
+    - {type: trans}
+    - END
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - ←
+    - ↓
+    - →
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - Caps
+    - Win
+    - {type: held}
+    - Boot
+    - {type: trans}
+  FUNC:
+  - - Caps
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - [Num Lock, F7, F8, F9, F10, F11]
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - F4
+    - F5
+    - F6
+    - F12
+    - F13
+  - - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+  - - {type: trans}
+    - F1
+    - F2
+    - F3
+    - F14
+    - F15
+  - - {type: held}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+    - {type: trans}
+combos:
+- p: [3, 14, 38]
+  k: Ctrl+C
+  l: [ROMAK]
+- p: [3, 16, 38]
+  k: Ctrl+V
+  l: [ROMAK]
+- p: [26, 3, 16, 38]
+  k: Ctrl+F
+  l: [ROMAK]
+- p: [3, 4, 38]
+  k: Tab
+  l: [ROMAK]
+- p: [15, 16, 38]
+  k: Enter
+  l: [ROMAK]
+- p: [26, 27, 38]
+  k: Ctrl+Z
+  l: [ROMAK]
+- p: [2, 3, 4, 38]
+  k: Ctrl+X
+  l: [ROMAK]
+- p: [2, 1, 38]
+  k: Ctrl+A
+  l: [ROMAK]
+- p: [21, 31]
+  k: é
+  l: [ROMAK]
+- p: [31, 20]
+  k: á
+  l: [ROMAK]
+- p: [31, 22]
+  k: í
+  l: [ROMAK]
+- p: [31, 8]
+  k: ó
+  l: [ROMAK]
+- p: [27, 38]
+  k: ç
+  l: [ROMAK]
+- p: [20, 8]
+  k: ão
+  l: [ROMAK]
+- p: [20, 19]
+  k: ã
+  l: [ROMAK]
+- p: [21, 20, 39]
+  k: ( )
+  l: [ROMAK]
+- p: [8, 9, 39]
+  k: '[ ]'
+  l: [ROMAK]
+- p: [32, 33, 39]
+  k: '{ }'
+  l: [ROMAK]
+- p: [3, 2, 38]
+  k: ''' '''
+  l: [ROMAK]
+- p: [38, 14, 15]
+  k: \" \"
+  l: [ROMAK]
+- p: [13, 14, 38]
+  k: Shift+/
+  l: [ROMAK]
+- p: [22, 21]
+  k: ;
+  l: [ROMAK]
+- p: [8, 21]
+  k: ões
+  l: [ROMAK]
+- p: [21, 20]
+  k: ê
+  l: [ROMAK]
+- p: [15, 16, 14, 38]
+  k: Shift+Enter
+  l: [ROMAK]
+- p: [31, 9]
+  k: ú
+  l: [ROMAK]

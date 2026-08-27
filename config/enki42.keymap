@@ -53,6 +53,16 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
 
+        nav_space: nav_space {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            bindings = <&mo>, <&kp>;
+        };
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER";
@@ -486,7 +496,7 @@
 &kp ESCAPE    &kp Q                 &kp B                 &kp M                     &kp G                   &kp K          &kp X      &kp L                    &kp O                      &kp U                  &kp Y                  &kp DELETE
 &kp TAB       &homerowL LEFT_GUI D  &homerowL LEFT_ALT N  &homerowL LEFT_CONTROL S  &homerowL LEFT_SHIFT T  &kp W          &kp Z      &homerowR RIGHT_SHIFT R  &homerowR RIGHT_CONTROL A  &homerowR RIGHT_ALT E  &homerowR RIGHT_GUI I  &mt RIGHT_ALT SQT
 &kp CAPSLOCK  &kp SLASH             &kp F                 &kp C                     &kp P                   &kp V          &kp J      &kp H                    &kp COMMA                  &kp DOT                &kp SEMICOLON          &kp ENTER
-                                                          &mo FUNC                  &mo ESP                  &kp BACKSPACE  &kp SPACE  &kp LEFT_SHIFT           &mo ARROW
+                                                          &mo FUNC                  &mo ESP                  &kp BACKSPACE  &nav_space ARROW SPACE  &kp LEFT_SHIFT           &mo ARROW
             >;
         };
 
@@ -509,9 +519,9 @@
         arrow {
             display-name = "NAV";
             bindings = <
-&trans  &trans  &trans  &kp LA(F4)        &kp LA(F10)     &trans        &trans  &trans       &trans  &kp LC(LS(TAB))  &abreFechaAba   &kp LC(TAB)
-&trans  &trans  &trans  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans        &trans  &trans       &trans  &kp HOME         &kp UP_ARROW    &kp END
-&trans  &trans  &trans  &trans            &trans          &trans        &trans  &trans       &trans  &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW
+&trans  &trans            &trans      &kp LA(F4)        &kp LA(F10)     &trans        &trans  &trans       &trans          &kp LC(LS(TAB))  &abreFechaAba  &kp LC(TAB)
+&trans  &kp LA(LS(TAB))   &swapper    &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans        &trans  &trans       &kp UP_ARROW    &kp HOME         &trans         &kp END
+&trans  &trans            &trans      &trans            &trans          &trans        &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans         &trans
                         &trans            &kp CAPSLOCK    &kp LEFT_GUI  &trans  &bootloader  &trans
             >;
         };

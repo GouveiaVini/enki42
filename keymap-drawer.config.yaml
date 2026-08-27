@@ -1,0 +1,86 @@
+draw_config:
+  key_w: 62
+  key_h: 58
+  split_gap: 38
+  key_rx: 7
+  key_ry: 7
+  dark_mode: auto
+  outer_pad_w: 28
+  outer_pad_h: 48
+  append_colon_to_layer_header: false
+  shrink_wide_legends: 6
+  style_layer_activators: true
+  footer_text: "Enki42 · ZMK · Windows · Romak"
+
+parse_config:
+  trans_legend:
+    t: ""
+    type: trans
+  modifier_fn_map:
+    left_ctrl: Ctrl
+    right_ctrl: Ctrl
+    left_shift: Shift
+    right_shift: Shift
+    left_alt: Alt
+    right_alt: AltGr
+    left_gui: Win
+    right_gui: Win
+    keycode_combiner: "{mods}+{key}"
+    mod_combiner: "{mod_1}+{mod_2}"
+  raw_binding_map:
+    "&select": "SELECT * FROM"
+    "&email": "E-mail"
+    "&consinco": "Consinco"
+    "&bootloader": "Boot"
+    "&swapper": "Alt+Tab"
+    "&abreFechaAba": "Aba: nova / fecha"
+    "&eh": "é"
+    "&ah": "á"
+    "&ih": "í"
+    "&oh": "ó"
+    "&ch": "ç"
+    "&ao": "ão"
+    "&an": "ã"
+    "&oes": "ões"
+    "&ea": "ê"
+    "&uh": "ú"
+    "&paren 0 0": "( )"
+    "&chave 0 0": "[ ]"
+    "&colches 0 0": "{ }"
+    "&aspasSimples 0 0": "' '"
+    "&aspasDuplas 0 0": '\" \"'
+  zmk_keycode_map:
+    EXCLAMATION: "!"
+    EXCL: "!"
+    AT_SIGN: "@"
+    HASH: "#"
+    DOLLAR: "$"
+    PERCENT: "%"
+    CARET: "^"
+    ASTERISK: "*"
+    SQT: "'"
+    MINUS: "-"
+    PLUS: "+"
+    SLASH: "/"
+    UNDERSCORE: "_"
+    EQUAL: "="
+    GRAVE: "`"
+    COMMA: ","
+    PERIOD: "."
+    DOT: "."
+    SEMICOLON: ";"
+    ESCAPE: Esc
+    DELETE: Del
+    BACKSPACE: Bksp
+    CAPSLOCK: Caps
+    ENTER: Enter
+    TAB: Tab
+    SPACE: Space
+    LEFT_SHIFT: Shift
+    LEFT_CONTROL: Ctrl
+    LEFT_GUI: Win
+    KP_NUMLOCK: Num Lock
+    UP_ARROW: "↑"
+    DOWN_ARROW: "↓"
+    LEFT_ARROW: "←"
+    RIGHT_ARROW: "→"
