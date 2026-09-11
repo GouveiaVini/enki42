@@ -1,0 +1,4 @@
+# Local Agent customizations
+.agents/
+.codex-tools/
+.flash-temp/

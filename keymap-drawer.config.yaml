@@ -30,7 +30,6 @@ parse_config:
   raw_binding_map:
     "&select": "SELECT * FROM"
     "&email": "E-mail"
-    "&consinco": "Consinco"
     "&bootloader": "Boot"
     "&swapper": "Alt+Tab"
     "&abreFechaAba": "Aba: nova / fecha"
