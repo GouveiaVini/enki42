@@ -159,56 +159,63 @@
         copy {
             bindings = <&kp LC(C)>;
             layers = <ROMAK>;
-            key-positions = <3 14 38>;
+            key-positions = <3 14>;
             require-prior-idle-ms = <100>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
             layers = <ROMAK>;
-            key-positions = <3 16 38>;
+            key-positions = <3 16>;
             require-prior-idle-ms = <100>;
         };
 
         find {
             bindings = <&kp LC(F)>;
             layers = <ROMAK>;
-            key-positions = <26 3 16 38>;
+            key-positions = <4 5>;
+            require-prior-idle-ms = <100>;
+        };
+
+        find_upper {
+            bindings = <&kp LC(LS(F))>;
+            layers = <ROMAK>;
+            key-positions = <16 17>;
             require-prior-idle-ms = <100>;
         };
 
         tab {
             bindings = <&kp TAB>;
             layers = <ROMAK>;
-            key-positions = <3 4 38>;
+            key-positions = <14 16 3>;
             require-prior-idle-ms = <100>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             layers = <ROMAK>;
-            key-positions = <15 16 38>;
+            key-positions = <15 16>;
             require-prior-idle-ms = <100>;
         };
 
         undo {
             bindings = <&kp LC(Z)>;
             layers = <ROMAK>;
-            key-positions = <26 27 38>;
+            key-positions = <26 27>;
             require-prior-idle-ms = <100>;
         };
 
         cut {
             bindings = <&kp LC(X)>;
             layers = <ROMAK>;
-            key-positions = <2 3 4 38>;
+            key-positions = <2 3 4>;
             require-prior-idle-ms = <100>;
         };
 
         all {
             bindings = <&kp LC(A)>;
             layers = <ROMAK>;
-            key-positions = <2 1 38>;
+            key-positions = <2 1>;
             require-prior-idle-ms = <100>;
         };
 
@@ -243,7 +250,7 @@
         ch {
             bindings = <&ch>;
             layers = <ROMAK>;
-            key-positions = <27 38>;
+            key-positions = <27 28>;
             require-prior-idle-ms = <100>;
         };
 
@@ -285,7 +292,7 @@
         aspas_C {
             bindings = <&aspasSimples 0 0>;
             layers = <ROMAK>;
-            key-positions = <3 2 38>;
+            key-positions = <38 2 3>;
             require-prior-idle-ms = <100>;
         };
 
@@ -299,21 +306,21 @@
         int {
             bindings = <&kp LS(SLASH)>;
             layers = <ROMAK>;
-            key-positions = <13 14 38>;
+            key-positions = <13 14>;
             require-prior-idle-ms = <100>;
         };
 
         PontVirg {
             bindings = <&kp SEMICOLON>;
             layers = <ROMAK>;
-            key-positions = <22 21 39>;
+            key-positions = <22 21>;
             require-prior-idle-ms = <100>;
         };
 
         page_up {
             bindings = <&kp PAGE_UP>;
             layers = <ROMAK>;
-            key-positions = <33 34 39>;
+            key-positions = <33 34>;
             require-prior-idle-ms = <100>;
         };
 
@@ -334,7 +341,7 @@
         s_enter {
             bindings = <&kp LS(ENTER)>;
             layers = <ROMAK>;
-            key-positions = <15 16 14 38>;
+            key-positions = <15 16 14>;
             require-prior-idle-ms = <100>;
         };
 
