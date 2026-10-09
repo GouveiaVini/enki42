@@ -49,7 +49,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
+            // sem hold-trigger-on-release: rolar I->E decide tap na hora, evitando Win+E (explorador)
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
 
