@@ -49,6 +49,30 @@
             hold-trigger-key-positions = <KEYS_L THUMBS>;
         };
 
+        // Win na fileira do meio: so ativa segurando (tap-preferred), rolagem rapida nunca vira Win
+        hrm_gui_l: hrm_gui_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <200>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+
+        hrm_gui_r: hrm_gui_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <200>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+        };
+
         nav_space: nav_space {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -156,224 +180,224 @@
             bindings = <&kp LC(C)>;
             layers = <ROMAK>;
             key-positions = <3 14>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
         };
 
         paste {
             bindings = <&kp LC(V)>;
             layers = <ROMAK>;
             key-positions = <3 16>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
         };
 
         find {
             bindings = <&kp LC(F)>;
             layers = <ROMAK>;
             key-positions = <4 5>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         find_upper {
             bindings = <&kp LC(LS(F))>;
             layers = <ROMAK>;
             key-positions = <16 17>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         tab {
             bindings = <&kp TAB>;
             layers = <ROMAK>;
             key-positions = <14 16 3>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         enter {
             bindings = <&kp ENTER>;
             layers = <ROMAK>;
             key-positions = <15 16>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
         };
 
         undo {
             bindings = <&kp LC(Z)>;
             layers = <ROMAK>;
             key-positions = <26 27>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         cut {
             bindings = <&kp LC(X)>;
             layers = <ROMAK>;
             key-positions = <2 3 4>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         all {
             bindings = <&kp LC(A)>;
             layers = <ROMAK>;
             key-positions = <2 1>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         eh {
             bindings = <&eh>;
             layers = <ROMAK>;
             key-positions = <21 31>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         ah {
             bindings = <&ah>;
             layers = <ROMAK>;
             key-positions = <31 20>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         ih {
             bindings = <&ih>;
             layers = <ROMAK>;
             key-positions = <31 22>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         oh {
             bindings = <&oh>;
             layers = <ROMAK>;
             key-positions = <31 8>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         ch {
             bindings = <&ch>;
             layers = <ROMAK>;
             key-positions = <27 38>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         ao {
             bindings = <&ao>;
             layers = <ROMAK>;
             key-positions = <20 8>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         an {
             bindings = <&an>;
             layers = <ROMAK>;
             key-positions = <20 19>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         c_paren {
             bindings = <&paren 0 0>;
             layers = <ROMAK>;
             key-positions = <21 20 39>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         c_chaves {
             bindings = <&chave 0 0>;
             layers = <ROMAK>;
             key-positions = <8 9 39>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         c_colche {
             bindings = <&colches 0 0>;
             layers = <ROMAK>;
             key-positions = <32 33 39>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         aspas_C {
             bindings = <&aspasSimples 0 0>;
             layers = <ROMAK>;
             key-positions = <38 2 3>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         aspasD_C {
             bindings = <&aspasDuplas 0 0>;
             layers = <ROMAK>;
             key-positions = <38 14 15>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         int {
             bindings = <&kp LS(SLASH)>;
             layers = <ROMAK>;
             key-positions = <13 14>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <100>;
         };
 
         PontVirg {
             bindings = <&kp SEMICOLON>;
             layers = <ROMAK>;
             key-positions = <22 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         page_up {
             bindings = <&kp PAGE_UP>;
             layers = <ROMAK>;
             key-positions = <33 34>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         oes {
             bindings = <&oes>;
             layers = <ROMAK>;
             key-positions = <8 21>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         ea {
             bindings = <&ea>;
             layers = <ROMAK>;
             key-positions = <21 20>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
 
         s_enter {
             bindings = <&kp LS(ENTER)>;
             layers = <ROMAK>;
             key-positions = <15 16 14>;
-            timeout-ms = <40>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <50>;
+            require-prior-idle-ms = <125>;
         };
 
         uh {
             bindings = <&uh>;
             layers = <ROMAK>;
             key-positions = <31 9>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <125>;
         };
     };
 
@@ -526,7 +550,7 @@
 
             bindings = <
 &kp ESCAPE    &kp Q                 &kp B                 &kp M                     &kp G                   &kp K          &kp X      &kp L                    &kp O                      &kp U                  &kp Y                  &kp DELETE
-&kp TAB       &homerowL LEFT_GUI D  &homerowL LEFT_ALT N  &homerowL LEFT_CONTROL S  &homerowL LEFT_SHIFT T  &kp W          &kp Z      &homerowR RIGHT_SHIFT R  &homerowR RIGHT_CONTROL A  &homerowR RIGHT_ALT E  &homerowR RIGHT_GUI I  &homerowR RIGHT_ALT SQT
+&kp TAB       &hrm_gui_l LEFT_GUI D  &homerowL LEFT_ALT N  &homerowL LEFT_CONTROL S  &homerowL LEFT_SHIFT T  &kp W          &kp Z      &homerowR RIGHT_SHIFT R  &homerowR RIGHT_CONTROL A  &homerowR RIGHT_ALT E  &hrm_gui_r RIGHT_GUI I  &homerowR RIGHT_ALT SQT
 &kp CAPSLOCK  &kp SLASH             &kp F                 &kp C                     &kp P                   &kp V          &kp J      &kp H                    &kp COMMA                  &kp DOT                &kp SEMICOLON          &kp ENTER
                                                           &mo FUNC                  &mo ESP                  &kp BACKSPACE  &nav_space ARROW SPACE  &kp LEFT_SHIFT           &mo ARROW
             >;
